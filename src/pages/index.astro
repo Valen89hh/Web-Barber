@@ -36,7 +36,7 @@ import Footer from "../components/general/footer/Footer.astro"
 			console.log(rect.top)
 
 			// Verificamos si la parte superior e inferior de la sección está dentro de la ventana
-			if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+			if (rect.top === 0) {
 				console.log(`Estás dentro de la sección ${section.id}`);
 				sectionOcultar?.classList.remove("visible-item")
 				sectionOcultar?.classList.add("oculto")

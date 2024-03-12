@@ -31,6 +31,10 @@ import Footer from "../components/general/footer/Footer.astro"
 			// Obtenemos el rectángulo que representa la sección
 			const rect = section.getBoundingClientRect();
 
+			console.log(window.innerHeight)
+			console.log(rect.bottom)
+			console.log(rect.top)
+
 			// Verificamos si la parte superior e inferior de la sección está dentro de la ventana
 			if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
 				console.log(`Estás dentro de la sección ${section.id}`);

@@ -1,10 +1,17 @@
 ---
 import Title from "../texts/Title.astro"
 import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
+import { Image } from 'astro:assets';
 ---
 
 <section class="relative h-screen">
-    <img src="/drawable/img_call_to_action.svg" alt="asd" class="object-cover h-full w-full">
+    <Image 
+        src="/drawable/img_call_to_action.png"
+        alt="img_call_to_action"
+        width={1440}
+        height={569}
+        class={"object-cover h-full w-full"}
+    />
     <div class="absolute inset-0 flex-center flex-col text-center w-full px-3 xs:w-1/2 mx-auto">
         <Title className="text-[2.5rem] xs:text-[3rem] sm:text-[3rem] " text="Experience the luxury of concierge barber services at your home" color="text-white"/>
         <ButtonPrimary text="Book an Appointment"/>

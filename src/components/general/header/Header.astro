@@ -2,12 +2,19 @@
 import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
 import ButtonOutline from "../../widgets/buttons/ButtonOutline.astro"
 import HeroContact from "./HeroContact.astro"
+import { Image } from 'astro:assets';
 
 ---
 
 
 <header class="relative z-0" id="hero">
-    <img src="/drawable/hero_img.svg" alt="" class="object-cover w-full h-[100vh] ">
+    <Image 
+        src="/drawable/img_header.png"
+        alt="img_header"
+        width={1440}
+        height={781}
+        class={"object-cover w-full h-[100vh] "}
+    />
     <div class="absolute  p-3 inset-0 top-0 flex flex-col justify-center items-center">
         <h1 class="uppercase barlow-black text-white lg:text-[5rem] xl:text-[6rem] xs:text-[4rem] text-[2.5rem] max-w-[80rem] text-center ">The ultimate convenience for busy people</h1>
         <p class="work-sans-medium text-white text-md xs:text-xl text-center">Experience the Convenience of In-Home Barber Services</p>

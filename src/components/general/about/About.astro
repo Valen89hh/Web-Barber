@@ -3,6 +3,8 @@ import Container from "../containers/Container.astro"
 import Title from "../texts/Title.astro"
 import Parrafo from "../texts/Parrafo.astro"
 import InfoTag from "./InfoTag.astro"
+import { Image } from 'astro:assets';
+
 
 ---
 
@@ -24,7 +26,13 @@ import InfoTag from "./InfoTag.astro"
                 />
             </div>
         </div>
-        <img src="/drawable/barber_personal.svg" alt="" class="object-cover h-[50vh] md:h-full w-full">
+        <Image 
+            src="/drawable/barber_personal.png"
+            alt="img_header"
+            width={600}
+            height={600}
+            class={"object-cover h-[50vh] md:h-full w-full"}
+        />
         
     </div>
 </Container>

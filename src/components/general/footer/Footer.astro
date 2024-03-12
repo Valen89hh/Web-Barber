@@ -6,11 +6,18 @@ import CardContact from "./CardContact.astro"
 import InputText from "./InputText.astro"
 import TextField from "./TextField.astro"
 import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
+import { Image } from 'astro:assets';
 ---
 
 <footer class="h-[200vh] xs:h-[140vh] md:h-screen bg-black">
     <div class="w-full relative">
-        <img src="/drawable/img_hero_footer.svg" alt="" class="object-cover w-full h-[150vh] xs:h-[100vh] md:h-[60vh] ">
+        <Image 
+            src="/drawable/img_hero_footer.png"
+            alt="img_hero_footer"
+            width={1440}
+            height={641}
+            class={"object-cover w-full h-[150vh] xs:h-[100vh] md:h-[60vh] "}
+        />
         <Container className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex-center flex-col gap-4">
                 <Title text="Make an Appointment" color="text-white self-center md:self-start"/>
@@ -52,7 +59,13 @@ import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
             </form>
         </Container>
     </div>
-    <img src="/drawable/img_map.svg" alt="" class="object-cover w-full h-[30vh] ">
+    <Image 
+        src="/drawable/img_map.png"
+        alt="img_map"
+        width={1440}
+        height={451}
+        class={"object-cover w-full h-[30vh] "}
+    />
     <Container className="flex flex-col-reverse md:flex-row justify-center md:justify-between gap-3 h-[20vh] xs:h-[10vh] item items-center">
         <span class="text-white work-sans font-normal text-center">© Copyright 2022 barbershop - All right reserved</span>
         <div class="flex gap-3">

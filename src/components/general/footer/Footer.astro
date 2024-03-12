@@ -30,24 +30,22 @@ import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
             </div>
             <form class="bg-white p-4 flex flex-col gap-[1.5rem] self-start mb-0 md:self-end md:mb-[-4.5rem]  h-fit">
                 <InputText
-                    id="iptFullName"
-                    placeholder="Full Name"
-                />
+                >
+                    <input type="text" placeholder="Full name">
+                </InputText>
                 <InputText
-                    id="iptSubject"
-                    placeholder="Subject"
-                />
+                >
+                    <input type="text" placeholder="Subject">
+                </InputText>
                 <div class="grid grid-cols-2 gap-3">
                     <InputText
-                        id="iptPhoneNumber"
-                        placeholder="Phone Number"
-                        type="number"
-                    />
+                    >
+                        <input type="number" placeholder="Phone number">
+                    </InputText>
                     <InputText
-                        id="iptEmail"
-                        placeholder="Email Address"
-                        type="email"
-                    />
+                    >
+                        <input type="email" placeholder="Email Address">
+                    </InputText>
                 </div>
                 <TextField/>
                 <ButtonPrimary text="Book an Appointment" className="w-fit"/>

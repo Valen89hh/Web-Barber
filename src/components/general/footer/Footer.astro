@@ -1,0 +1,68 @@
+---
+import Container from "../containers/Container.astro"
+import Title from "../texts/Title.astro"
+import Parrafo from "../texts/Parrafo.astro"
+import CardContact from "./CardContact.astro"
+import InputText from "./InputText.astro"
+import TextField from "./TextField.astro"
+import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
+---
+
+<footer class="h-[200vh] xs:h-[140vh] md:h-screen bg-black">
+    <div class="w-full relative">
+        <img src="/drawable/img_hero_footer.svg" alt="" class="object-cover w-full h-[150vh] xs:h-[100vh] md:h-[60vh] ">
+        <Container className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex-center flex-col gap-4">
+                <Title text="Make an Appointment" color="text-white self-center md:self-start"/>
+                <Parrafo color="text-white" className="text-center md:text-start" text="Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo"/>
+                <div class=" gap-4 flex flex-col xs:flex-row md:flex-col self-center md:self-start">
+
+                    <CardContact
+                        img="/icons/ic_call.svg"
+                        titleContact="Give us a call"
+                        infoContact="(475)453-3465"
+                    />
+                    <CardContact
+                        img="/icons/ic_email.svg"
+                        titleContact="Send us an email"
+                        infoContact="hello@example.com"/>
+                </div>
+            </div>
+            <form class="bg-white p-4 flex flex-col gap-[1.5rem] self-start mb-0 md:self-end md:mb-[-4.5rem]  h-fit">
+                <InputText
+                    id="iptFullName"
+                    placeholder="Full Name"
+                />
+                <InputText
+                    id="iptSubject"
+                    placeholder="Subject"
+                />
+                <div class="grid grid-cols-2 gap-3">
+                    <InputText
+                        id="iptPhoneNumber"
+                        placeholder="Phone Number"
+                        type="number"
+                    />
+                    <InputText
+                        id="iptEmail"
+                        placeholder="Email Address"
+                        type="email"
+                    />
+                </div>
+                <TextField/>
+                <ButtonPrimary text="Book an Appointment" className="w-fit"/>
+            </form>
+        </Container>
+    </div>
+    <img src="/drawable/img_map.svg" alt="" class="object-cover w-full h-[30vh] ">
+    <Container className="flex flex-col-reverse md:flex-row justify-center md:justify-between gap-3 h-[20vh] xs:h-[10vh] item items-center">
+        <span class="text-white work-sans font-normal text-center">© Copyright 2022 barbershop - All right reserved</span>
+        <div class="flex gap-3">
+            <img src="/icons/ic_facebook.svg" alt="facebook">
+            <img src="/icons/ic_twitter.svg" alt="twitter">
+            <img src="/icons/ic_instagram.svg" alt="instagram">
+            <img src="/icons/ic_pinterest.svg" alt="pinterest">
+            <img src="/icons/ic_linkedin.svg" alt="linkedin">
+        </div>
+    </Container>
+</footer>

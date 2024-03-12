@@ -1,0 +1,20 @@
+---
+interface Props{
+    titleContact: string
+    infoContact: string
+    img: string
+}
+
+const {titleContact, infoContact, img} = Astro.props
+
+---
+
+<div class="flex self-start gap-4">
+    <div class="bg-white p-3">
+        <img src={img} alt={titleContact}>
+    </div>
+    <div>
+        <h5 class="uppercase text-white font-extrabold">{titleContact}</h5>
+        <span class="text-white">{infoContact}</span>
+    </div>
+</div>

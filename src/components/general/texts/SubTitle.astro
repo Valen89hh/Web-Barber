@@ -1,0 +1,10 @@
+---
+interface Props{
+    text: string
+    className?: string
+    color?: string
+}
+const {text, className = "", color="text-black"} = Astro.props
+---
+
+<h3 class={`uppercase font-extrabold  ${color} ${className}`}>{text}</h3>

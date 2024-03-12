@@ -1,0 +1,62 @@
+---
+import Container from "../containers/Container.astro"
+import Title from "../texts/Title.astro"
+import Parrafo from "../texts/Parrafo.astro"
+import CardWhy from "./CardWhy.astro"
+import ReviewCard from "./ReviewCard.astro"
+import SmallTitle from "../texts/SmallTitle.astro"
+import Starts from "./Starts.astro"
+---
+
+<Container className="h-[210vh] xs:h-[150vh] lg:h-screen flex flex-col justify-evenly">
+    <div class="text-center">
+        <Title text="Browse our services"/>
+        <Parrafo className="w-full sm:w-3/4 mx-auto" text="Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo eget."/>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[3rem] ">
+        <CardWhy 
+            title="Licensed"
+            img="/icons/ic_licensed.svg"
+            text="Our team of licensed and insured barbers follow strict cleanliness and sanitation guidelines for a safe and comfortable experience."
+        />
+        <CardWhy 
+            title="Master"
+            img="/icons/ic_masters.svg"
+            text="Our team of licensed and insured barbers follow strict cleanliness and sanitation guidelines for a safe and comfortable experience."
+        />
+        <CardWhy 
+            title="Trusted"
+            img="/icons/ic_trusted.svg"
+            text="Our team of licensed and insured barbers follow strict cleanliness and sanitation guidelines for a safe and comfortable experience."
+        />
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-[3rem] lg:gap-4">
+        <div class="px-[3rem] col-span-2 pb-[3rem] border-solid border-dark-vanilla border-[2px] gap-2 flex-center lg:hidden flex-col relative">
+            <img src="/drawable/img_why.svg" alt="" class="rounded-full mt-[-3rem] ">
+            <SmallTitle text="The Best Barber Services" className="text-center"/>
+            <Starts/>
+            <Parrafo className="text-center" text="Et proin ut in dignissim sem non a nullam magna lectus urna et dui quam tellus imperdiet sit purus at fringilla scelerisque diam amet fermentum orci fringilla aliquet nulla lectus erat eu auctor"/>
+            <span class="uppercase font-bold text-[0.8rem]">Sam Houston</span>
+        </div>
+        <ReviewCard
+            img="/icons/ic_google.svg"
+            nameReview="Google"
+            score="4.9"
+            reviews={196}
+        />
+        <div class="px-[3rem] pb-[3rem] border-solid border-dark-vanilla border-[2px] gap-2 hidden lg:flex justify-center items-center flex-col relative">
+            <img src="/drawable/img_why.svg" alt="" class="rounded-full mt-[-3rem] ">
+            <SmallTitle text="The Best Barber Services" className="text-center"/>
+            <Starts/>
+            <Parrafo className="text-center" text="Et proin ut in dignissim sem non a nullam magna lectus urna et dui quam tellus imperdiet sit purus at fringilla scelerisque diam amet fermentum orci fringilla aliquet nulla lectus erat eu auctor"/>
+            <span class="uppercase font-bold text-[0.8rem]">Sam Houston</span>
+        </div>
+        <ReviewCard
+            img="/icons/ic_tripadivisor.svg"
+            nameReview="Tripadivisor"
+            score="5.0"
+            reviews={196}
+        />
+
+    </div>
+</Container>

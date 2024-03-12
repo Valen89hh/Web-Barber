@@ -1,0 +1,13 @@
+---
+interface Porps{
+    text: string,
+    className?: string
+}
+
+const {text, className= ""} = Astro.props
+---
+
+
+<button class={`uppercase cursor-pointer text-black font-extrabold bg-dark-vanilla p-3 border-solid border-dark-vanilla border-2 ${className}`}>
+    {text}
+</button>

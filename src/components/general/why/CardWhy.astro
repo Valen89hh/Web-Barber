@@ -1,0 +1,23 @@
+---
+import Parrafo from "../texts/Parrafo.astro"
+
+interface Props{
+    title: string
+    img: string
+    text: string
+}
+
+const {title, img, text} = Astro.props
+---
+
+
+<div class=" text-black">
+    <div class="flex flex-row md:flex-col gap-4 justify-center items-center">
+        <div class="flex flex-col justify-center items-center gap-1">
+            <img src={img} alt="ubicacion">
+            <h3 class="uppercase font-extrabold text-black">{title}</h3>
+            <div class="p-[2px] bg-dark-vanilla w-[3rem] "/>
+        </div>
+        <Parrafo className="text-center" text={text}/>
+    </div>
+</div>

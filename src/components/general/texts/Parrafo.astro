@@ -1,0 +1,14 @@
+---
+interface Props{
+    text: string
+    color?: string
+    className?: string
+}
+
+const {text, color="text-black", className=""} = Astro.props
+
+---
+
+<p class={`work-sans-regular text-[0.8rem] sm:text-[0.9rem]  ${color} ${className}`}>
+    {text}
+</p>

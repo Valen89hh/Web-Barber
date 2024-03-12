@@ -1,0 +1,36 @@
+---
+import Container from "../containers/Container.astro"
+import Title from "../texts/Title.astro"
+import Parrafo from "../texts/Parrafo.astro"
+import InfoTag from "./InfoTag.astro"
+
+---
+
+<Container className="flex justify-center items-center h-[100vh]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[1rem] xs:gap-[3rem]  w-fit ">
+        <div class=" flex flex-col justify-center items-center gap-4">
+            <Title text="Your personal barber service at your home" className="w-full md:w-3/4 md:self-start text-center md:text-start"/>
+            <Parrafo text="Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo" className="md:self-start text-center md:text-start"/>
+            <div class="flex justify-between w-full">
+                <InfoTag
+                    number="99"
+                    signo="%"
+                    text="customer satisfaction"
+                />
+                <InfoTag
+                    number="10"
+                    signo="+"
+                    text="years of experience"
+                />
+            </div>
+        </div>
+        <img src="/drawable/barber_personal.svg" alt="" class="object-cover h-[50vh] md:h-full w-full">
+        
+    </div>
+</Container>
+
+<style>
+    .grid-center{
+        place-items: center;
+    }
+</style>

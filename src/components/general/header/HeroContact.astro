@@ -1,0 +1,28 @@
+---
+import Container from "../containers/Container.astro";
+import ContactCard from "./ContactCard.astro"
+---
+
+<div class="mt-[-5rem] z-10 w-full opacity-0 flex justify-center items-center" id="hero-contact">
+    <Container className="bg-white grid w-3/4 sm:w-full grid-cols-1 sm:grid-cols-3 p-5 gap-3">
+        <ContactCard
+            img="/icons/ubicacion.svg"
+            title="Address"
+        >
+            <p slot="line-one">3696 Lynden Road, Lefroy Ontario canada</p>
+        </ContactCard>
+        <ContactCard
+            img="/icons/phone.svg"
+            title="Phone">
+        
+            <p slot="line-one">+62(123)-456-7890</p>
+            <p slot="line-two">+62(123)-456-7890</p>
+        </ContactCard>
+        <ContactCard
+            img="/icons/hora.svg"
+            title="Hours">
+            <p slot="line-one">Mon – Sat: 9AM – 8PM</p>
+            <p slot="line-two">Sun: 9AM – 6PM</p>
+        </ContactCard>
+    </Container>
+</div>

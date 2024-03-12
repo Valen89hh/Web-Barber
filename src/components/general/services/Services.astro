@@ -1,0 +1,62 @@
+---
+import Container from "../containers/Container.astro"
+import Title from "../texts/Title.astro"
+import Parrafo from "../texts/Parrafo.astro"
+import ItemService from "./ItemService.astro"
+import type {ServiceModel} from "../../../domain/local/ServiceModel.ts"
+import ButtonPrimary from "../../widgets/buttons/ButtonPrimary.astro"
+
+
+const listService:ServiceModel[] = [
+    {
+        src: "/icons/ic_adult_haircut.svg",
+        nameService: "Adult haircut",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 39
+    },
+    {
+        src: "/icons/ic_kid_haircut.svg",
+        nameService: "Kids haircut",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 19
+    },
+    {
+        src: "/icons/ic_beard_trim.svg",
+        nameService: "Beard trim",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 29
+    },
+    {
+        src: "/icons/ic_neck_shave.svg",
+        nameService: "Neck Shave",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 39
+    },
+    {
+        src: "/icons/ic_scalp.svg",
+        nameService: "Scalp Moisturizing",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 10
+    },
+    {
+        src: "/icons/ic_beard.svg",
+        nameService: "Beard grooming",
+        description: "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        price: 39
+    },
+    
+]
+---
+
+<Container className="h-screen flex-col flex-center xl:gap-[4rem] md:gap-[3rem] gap-[2rem] ">
+    <div class="text-center">
+        <Title text="Browse our services"/>
+        <Parrafo className="w-full sm:w-3/4 mx-auto" text="Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo eget."/>
+    </div>
+    <div class="bg-white grid grid-cols-2 p-[2rem] gap-[2rem]  lg:p-[4rem] lg:gap-[4rem] md:p-[2rem]">
+        {listService.map((service)=>(
+            <ItemService service={service} />
+        ))}
+    </div>
+    <ButtonPrimary text="Book appoiment" />
+</Container>

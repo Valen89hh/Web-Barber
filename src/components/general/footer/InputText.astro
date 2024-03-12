@@ -1,0 +1,15 @@
+---
+interface Props{
+    placeholder: string
+    id:string
+    type?: string
+}
+
+
+const {placeholder, id, type="text"} = Astro.props
+
+---
+
+<div class=" border-b-2 border-b-black border-solid">
+    <input id={id} type={type != null ? type : "text"} placeholder={placeholder} class="outline-none w-full  pb-3 placeholder:text-black placeholder:uppercase font-bold text-black">
+</div>

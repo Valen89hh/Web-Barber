@@ -1,0 +1,25 @@
+---
+import SubTitle from "../texts/SubTitle.astro"
+import Parrafo from "../texts/Parrafo.astro"
+import type {ServiceModel} from "../../../domain/local/ServiceModel.ts"
+
+interface Props{
+    service: ServiceModel
+}
+
+const {service} = Astro.props
+
+---
+
+
+<article class="flex-center flex-col xs:flex-row gap-2">
+    <div class="flex justify-end items-start pr-0 xs:pr-5  w-[30%] h-full xs:w-fit ">
+        <img src={service.src} alt="" class="">
+    </div>
+    <div class="flex flex-col gap-2 items-center xs:items-start  w-full md:w-1/2   overflow-ellipsis">
+        <SubTitle text={service.nameService} className="leading-4 text-center xs:text-start"/>
+        <Parrafo className="hidden xs:block" text={service.description}/>
+        <SubTitle text={`$${service.price} USD`} color="text-dark-vanilla xs:text-black"/>
+
+    </div>
+</article>

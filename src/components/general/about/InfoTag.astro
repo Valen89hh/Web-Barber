@@ -1,0 +1,14 @@
+---
+interface Props{
+    number: string
+    signo: string
+    text: string
+}
+
+const {number, signo, text} = Astro.props
+---
+
+<div class="text-center md:text-start">
+    <h3 class="font-extrabold text-[1.5rem] xs:text-[2rem] md:text-[3rem] lg:text-[4rem]">{number}<span class="text-dark-vanilla">{signo}</span></h3>
+    <span class="font-extrabold text-[1rem] xs:text-[1.3rem] md:text-[1.5rem] uppercase leading-4">{text}</span>
+</div>
